@@ -2,23 +2,20 @@ sap.ui.define(
     [
         "sap/ui/core/mvc/Controller",
         "sap/m/MessageToast",
-        "sap/ui/model/json/JSONModel"
+        "nsdprb/SAPUI5/model/Models"
     ],
     /**
      * 
      * @param {typeof sap.ui.core.mvc.Controller} Controller 
-     * @param {typeof sap.m.MessageToast} MessageToast 
-     * @param {typeof sap.ui.model.json.JSONModel} JSONModel 
+     * @param {typeof sap.m.MessageToast} MessageToast
      * @returns 
      */
-    function(Controller, MessageToast, JSONModel) {
+    function(Controller, MessageToast, Models) {
       "use strict";
   
       return Controller.extend("nsdprb.SAPUI5.controller.App", {
         onInit: function() {
-          const oData = { recipient : { name:"World"} };
-          const oModel = new JSONModel(oData);
-          this.getView().setModel(oModel);
+          this.getView().setModel(Models.createRecipient());
         },
         onShowHello:function(){
           MessageToast.show("Hola Mundo");
