@@ -1,8 +1,12 @@
 sap.ui.define([
-
+    "sap/m/Text"
 ],
-function () {
-    "use strict";
-    alert("Hola Mundo");
-}
+    /**
+     * 
+     * @param {typeof sap.m.Text} Text 
+     */
+    function (Text) {
+        "use strict";
+        new Text({ text: "Hola Mundo" }).placeAt("content");
+    }
 );
