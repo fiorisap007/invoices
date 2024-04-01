@@ -1,4 +1,5 @@
 <mvc:View   controllerName="nsdprb.SAPUI5.controller.App"
             xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
     <Button id="show" text="Say Hello" press=".onShowHello"></Button>
+    <Input id="hello" value="{/recipient/name}" description="Hello {/recipient/name}" width="60%" valueLiveUpdate="true"></Input>
 </mvc:View>
