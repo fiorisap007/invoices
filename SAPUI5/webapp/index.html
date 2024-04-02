@@ -9,7 +9,7 @@
             src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" 
             data-sap-ui-theme="sap_horizon"
             data-sap-ui-resourceroots='{"nsdprb.SAPUI5": "./"}' 
-            data-sap-ui-oninit="module:nsdprb/SAPUI5/index" 
+            data-sap-ui-oninit="module:sap/ui/core/ComponentSupport" 
             data-sap-ui-compatVersion="edge"
             data-sap-ui-async="true" 
             data-sap-ui-frameOptions="trusted">
@@ -17,7 +17,13 @@
 </head>
 
 <body id="content" class="sapUiBody">
-
+    <div
+        data-sap-ui-component
+        data-name="nsdprb.SAPUI5"
+        data-id="container"
+        data-settings='{"id" : "nsdprb.SAPUI5"}'
+        data-handle-validation="true"
+    ></div>
 </body>
 
 </html>
