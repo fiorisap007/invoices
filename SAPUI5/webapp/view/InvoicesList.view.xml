@@ -1,6 +1,13 @@
 <mvc:View   controllerName="nsdprb.SAPUI5.controller.InvoicesList"
             xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
-    <List id="list" headerText="{i18n>invoiceListTitle}" class="sapUiResponsiveMargin" width="auto" items="{invoices>/Invoices}">
+    <List id="invoiceList" headerText="{i18n>invoiceListTitle}" class="sapUiResponsiveMargin" width="auto" items="{invoices>/Invoices}">
+        <headerToolbar>
+            <Toolbar id="tb">
+                <Title id="tt" text="{i18n>invoiceListTitle}"></Title>
+                <ToolbarSpacer id="tsp"></ToolbarSpacer>
+                <SearchField id="sf" width="50%" search=".onFilterInvoices" ></SearchField>
+            </Toolbar>
+        </headerToolbar>
         <items>
             <ObjectListItem id="oli01" 
                             title="{invoices>Quantity} x {invoices>ProductName}" 
