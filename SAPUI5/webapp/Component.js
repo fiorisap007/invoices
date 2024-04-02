@@ -14,12 +14,8 @@ function (UIComponent,Models,ResourceModel) {
 
     return UIComponent.extend("nsdprb.SAPUI5.Component", {
 
-        metadata:{ "rootView": {
-                                  "viewName":"nsdprb.SAPUI5.view.App",
-                                  "type":"XML",
-                                  "async": true,
-                                  "id":"app"
-                               }
+        metadata:{ 
+            manifest:"json"
         },
 
         init: function () {
