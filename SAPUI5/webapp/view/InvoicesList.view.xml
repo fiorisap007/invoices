@@ -11,7 +11,8 @@
                                             showMeasure:false
                                       }
                                     }"
-                            numberUnit="{currency>/eur}"        
+                            numberUnit="{currency>/eur}"
+                            numberState="{= ${invoices>ExtendedPrice} > 9 ? 'Success': 'Error'}"   
                                     >
             </ObjectListItem>            
         </items>
