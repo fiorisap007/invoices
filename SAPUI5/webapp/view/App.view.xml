@@ -10,7 +10,7 @@
                             <content>
                                 <Button id="sayHello" text="{i18n>showHelloButtonText}" press=".onShowHello" class="sapUiSmallMarginEnd" ></Button>
                                 <Input id="hello" value="{/recipient/name}"  width="60%" valueLiveUpdate="true" ></Input>
-                                <Text id="text" text="Hello {/recipient/name}" class="sapUiSmallMargin"></Text>
+                                <Text id="text" text="Hello {/recipient/name}" class="sapUiSmallMargin boldElements sapThemeHighlight-asColor"></Text>
                             </content>
                         </Panel>
                     </content>
