@@ -11,6 +11,7 @@
                     <content>
                         <mvc:XMLView id="xmlview" viewName="nsdprb.SAPUI5.view.HelloPanel"></mvc:XMLView>
                         <core:Fragment fragmentName="nsdprb.SAPUI5.view.Form01" type="XML"></core:Fragment>
+                        <mvc:XMLView id="xmlview1" viewName="nsdprb.SAPUI5.view.InvoicesList"></mvc:XMLView>
                     </content>
                 </Page>
             </pages>
