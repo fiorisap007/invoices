@@ -6,13 +6,7 @@
             <pages>
                 <Page id="page" title="{i18n>appTitle}">
                     <content>
-                        <Panel id="panel" headerText="{i18n>helloPanel}" class="sapUiResponsiveMargin" width="auto" >
-                            <content>
-                                <Button id="sayHello" text="{i18n>showHelloButtonText}" press=".onShowHello" class="sapUiSmallMarginEnd" ></Button>
-                                <Input id="hello" value="{/recipient/name}"  width="60%" valueLiveUpdate="true" ></Input>
-                                <Text id="text" text="Hello {/recipient/name}" class="sapUiSmallMargin boldElements sapThemeHighlight-asColor"></Text>
-                            </content>
-                        </Panel>
+                        <mvc:XMLView id="xmlview" viewName="nsdprb.SAPUI5.view.HelloPanel"></mvc:XMLView>
                     </content>
                 </Page>
             </pages>
