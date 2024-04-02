@@ -1,6 +1,12 @@
 <mvc:View   controllerName="nsdprb.SAPUI5.controller.InvoicesList"
             xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
-    <List id="invoiceList" headerText="{i18n>invoiceListTitle}" class="sapUiResponsiveMargin" width="auto" items="{invoices>/Invoices}">
+    <List id="invoiceList" headerText="{i18n>invoiceListTitle}" 
+                           class="sapUiResponsiveMargin" 
+                           width="auto" 
+                           items="{ path: 'invoices>/Invoices',
+                                    sorter: { path: 'ProductName'}
+                                  }"
+                           >
         <headerToolbar>
             <Toolbar id="tb">
                 <Title id="tt" text="{i18n>invoiceListTitle}"></Title>
