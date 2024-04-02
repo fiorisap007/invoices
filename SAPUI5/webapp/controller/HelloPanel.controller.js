@@ -37,7 +37,7 @@ sap.ui.define(
             oDialog.open();
           });
         }else{
-          this.byid("helloDialog").open();
+          this.byId("helloDialog").open();
         }
       },
       onCloseDialog:function(){

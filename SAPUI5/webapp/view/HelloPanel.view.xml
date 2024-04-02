@@ -4,7 +4,7 @@
 
                         <Panel id="panel" headerText="{i18n>helloPanel}" class="sapUiResponsiveMargin" width="auto" >
                             <content>
-                                <Button id="xhelloDialog" text="{i18n>helloDialogBut}" press=".onOpenDialog" class="sapUiSmallMarginEnd" ></Button>
+                                <Button id="helloDialogButton" icon="sap-icon://action" text="{i18n>helloDialogBut}" press=".onOpenDialog" class="sapUiSmallMarginEnd" ></Button>
                                 <Button id="xsayHello" text="{i18n>showHelloButtonText}" press=".onShowHello" class="sapUiSmallMarginEnd" ></Button>
                                 <Input id="xhello" value="{/recipient/name}"  width="60%" valueLiveUpdate="true" ></Input>
                                 <Text id="xtext" text="Hello {/recipient/name}" class="sapUiSmallMargin boldElements sapThemeHighlight-asColor"></Text>
