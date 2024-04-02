@@ -14,6 +14,9 @@
                             numberUnit="{currency>/eur}"
                             numberState="{= ${invoices>ExtendedPrice} > 9 ? 'Success': 'Error'}"   
                                     >
+                <firstStatus>
+                    <ObjectStatus id="os1" text="{ path: 'invoices>Status', formatter: '.formatter.invoiceStatus'}"></ObjectStatus>
+                </firstStatus>
             </ObjectListItem>            
         </items>
     </List>
