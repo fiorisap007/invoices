@@ -13,6 +13,9 @@ sap.ui.define(
       return Controller.extend("nsdprb.SAPUI5.controller.App", {
         onInit: function() {
 
+        },
+        onOpenDialogHeader: function (){
+          this.getOwnerComponent().openHelloDialog();
         }
       });
     }

@@ -1,17 +1,15 @@
 sap.ui.define(
   [
       "sap/ui/core/mvc/Controller",
-      "sap/m/MessageToast",
-      "sap/ui/core/Fragment"
+      "sap/m/MessageToast"
   ],
   /**
    * 
    * @param {typeof sap.ui.core.mvc.Controller} Controller 
    * @param {typeof sap.m.MessageToast} MessageToast
-   * @param {typeof sap.ui.core.Fragment} Fragment
    * @returns 
    */
-  function(Controller, MessageToast, Fragment ) {
+  function(Controller, MessageToast ) {
     "use strict";
 
     return Controller.extend("nsdprb.SAPUI5.controller.HelloPanel", {
@@ -26,7 +24,7 @@ sap.ui.define(
         MessageToast.show(sMsg);
       },
       onOpenDialog:function(){
-
+        this.getOwnerComponent().openHelloDialog();
       }
     });
   }

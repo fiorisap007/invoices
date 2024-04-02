@@ -1,7 +1,8 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
     "nsdprb/SAPUI5/model/Models",
-    "sap/ui/model/resource/ResourceModel"
+    "sap/ui/model/resource/ResourceModel",
+    "./controller/HelloDialog"
 ],
 /**
  * 
@@ -9,7 +10,7 @@ sap.ui.define([
  * @param {typeof sap.ui.model.resource.ResourceModel} ResourceModel
  * @returns 
  */
-function (UIComponent,Models,ResourceModel) {
+function (UIComponent,Models,ResourceModel,HelloDialog) {
     "use strict";
 
     return UIComponent.extend("nsdprb.SAPUI5.Component", {
@@ -29,6 +30,16 @@ function (UIComponent,Models,ResourceModel) {
             const i18nModel = new ResourceModel({bundleName:"nsdprb.SAPUI5.i18n.i18n"});
             this.setModel(i18nModel,"i18n");
 
+            //
+            this._HelloDialog = new HelloDialog(this.getRootControl());
+        },
+
+        exit: function (){
+            this._HelloDialog.destroy();
+            delete this._HelloDialog;
+        },
+        openHelloDialog: function(){
+            this._HelloDialog.open();
         }
     });
 }

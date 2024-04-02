@@ -5,6 +5,9 @@
         <App id="app">
             <pages>
                 <Page id="page" title="{i18n>appTitle}">
+                    <headerContent>
+                        <Button id="helloDialogHeader" icon="sap-icon://action" press=".onOpenDialogHeader" class="sapUiSmallMarginEnd" ></Button>
+                    </headerContent>
                     <content>
                         <mvc:XMLView id="xmlview" viewName="nsdprb.SAPUI5.view.HelloPanel"></mvc:XMLView>
                         <core:Fragment fragmentName="nsdprb.SAPUI5.view.Form01" type="XML"></core:Fragment>
