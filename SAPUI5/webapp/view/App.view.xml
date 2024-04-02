@@ -1,5 +1,5 @@
 <mvc:View   controllerName="nsdprb.SAPUI5.controller.App"
-            xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+            xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
             displayBlock="true">
     <Shell id="shell">
         <App id="app">
@@ -7,6 +7,7 @@
                 <Page id="page" title="{i18n>appTitle}">
                     <content>
                         <mvc:XMLView id="xmlview" viewName="nsdprb.SAPUI5.view.HelloPanel"></mvc:XMLView>
+                        <core:Fragment fragmentName="nsdprb.SAPUI5.view.Form01" type="XML"></core:Fragment>
                     </content>
                 </Page>
             </pages>
