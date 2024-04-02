@@ -6,12 +6,21 @@ sap.ui.define([
 /**
  * 
  * @param {typeof sap.ui.core.UIComponent} UIComponent 
+ * @param {typeof sap.ui.model.resource.ResourceModel} ResourceModel
  * @returns 
  */
 function (UIComponent,Models,ResourceModel) {
     "use strict";
 
     return UIComponent.extend("nsdprb.SAPUI5.Component", {
+
+        metadata:{ "rootView": {
+                                  "viewName":"nsdprb.SAPUI5.view.App",
+                                  "type":"XML",
+                                  "async": true,
+                                  "id":"app"
+                               }
+        },
 
         init: function () {
             // call the base component's init function
