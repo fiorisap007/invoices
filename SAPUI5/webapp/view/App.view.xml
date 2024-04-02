@@ -1,18 +1,20 @@
 <mvc:View   controllerName="nsdprb.SAPUI5.controller.App"
             xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
             displayBlock="true">
-    <App id="app">
-        <pages>
-            <Page id="page" title="{i18n>appTitle}">
-                <content>
-                    <Panel id="panel" headerText="{i18n>helloPanel}">
-                        <content>
-                            <Button id="sayHello" text="{i18n>showHelloButtonText}" press=".onShowHello"></Button>
-                            <Input id="hello" value="{/recipient/name}" description="Hello {/recipient/name}" width="60%" valueLiveUpdate="true"></Input>
-                        </content>
-                    </Panel>
-                </content>
-            </Page>
-        </pages>
-    </App>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>appTitle}">
+                    <content>
+                        <Panel id="panel" headerText="{i18n>helloPanel}">
+                            <content>
+                                <Button id="sayHello" text="{i18n>showHelloButtonText}" press=".onShowHello"></Button>
+                                <Input id="hello" value="{/recipient/name}" description="Hello {/recipient/name}" width="60%" valueLiveUpdate="true"></Input>
+                            </content>
+                        </Panel>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>
