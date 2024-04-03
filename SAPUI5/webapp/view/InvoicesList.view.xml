@@ -3,7 +3,7 @@
     <List id="invoiceList" headerText="{i18n>invoiceListTitle}" 
                            class="sapUiResponsiveMargin" 
                            width="auto" 
-                           items="{ path: 'invoices>/Invoices',
+                           items="{ path: 'northwind>/Invoices',
                                     sorter: { path: 'ShipperName',
                                               group: true
                                             }
@@ -18,8 +18,8 @@
         </headerToolbar>
         <items>
             <ObjectListItem id="oli01" 
-                            title="{invoices>Quantity} x {invoices>ProductName}" 
-                            number="{ parts : [ { path: 'invoices>ExtendedPrice'},
+                            title="{northwind>Quantity} x {northwind>ProductName}" 
+                            number="{ parts : [ { path: 'northwind>ExtendedPrice'},
                                                 { path: 'currency>/eur'}],
                                       type: 'sap.ui.model.type.Currency',
                                       formatOptions:{
@@ -27,11 +27,8 @@
                                       }
                                     }"
                             numberUnit="{currency>/eur}"
-                            numberState="{= ${invoices>ExtendedPrice} > 9 ? 'Success': 'Error'}"   
+                            numberState="{= ${northwind>ExtendedPrice} > 9 ? 'Success': 'Error'}"   
                                     >
-                <firstStatus>
-                    <ObjectStatus id="os1" text="{ path: 'invoices>Status', formatter: '.formatter.invoiceStatus'}"></ObjectStatus>
-                </firstStatus>
             </ObjectListItem>            
         </items>
     </List>
