@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- https://github.com/SAP/theming-base-content -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Server</title>
+    <script id="sap-ui-bootstrap" 
+            src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" 
+            data-sap-ui-theme="sap_horizon_dark"
+            data-sap-ui-resourceroots='{"nsdprb.SAPUI5": "../"}' 
+            data-sap-ui-oninit="module:nsdprb/SAPUI5/test/initMockServer" 
+            data-sap-ui-compatVersion="edge"
+            data-sap-ui-async="true" 
+            data-sap-ui-frameOptions="trusted">
+    </script>
+</head>
+
+<body id="content" class="sapUiBody">
+    <div
+        data-sap-ui-component
+        data-name="nsdprb.SAPUI5"
+        data-id="container"
+        data-settings='{"id" : "nsdprb.SAPUI5"}'
+        data-handle-validation="true"
+    ></div>
+</body>
+
+</html>
