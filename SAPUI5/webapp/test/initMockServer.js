@@ -1,23 +1,23 @@
 sap.ui.define([
-    "../localService/mockServer",
+    "../localService/mockserver",
     "sap/m/MessageBox"
 ],
-/**
- * 
- * @param {typeof sap.m.MessageBox} MessageBox 
- * @returns 
- */
-function (mockServer,MessageBox) {
-    "use strict";
+    /**
+     * 
+     * @param {typeof sap.m.MessageBox} MessageBox 
+     * @returns 
+     */
+    function (mockserver, MessageBox) {
+        "use strict";
 
-    let aMockServers = [];
+        let aMockServers = [];
 
-    aMockServers.push(mockServer.init());
+        aMockServers.push(mockserver.init());
 
-    Promise.all(aMockServers).catch( function (oError){
-        MessageBox.error(oError.message);
-    }).finally( function (){
-        sap.ui.requiere(["module:sap/ui/core/ComponentSupport"]);
-    })
-}
+        Promise.all(aMockServers).catch(function (oError) {
+            MessageBox.error(oError.message);
+        }).finally(function () {
+            sap.ui.require(["sap/ui/core/ComponentSupport"]);
+        })
+    }
 );
